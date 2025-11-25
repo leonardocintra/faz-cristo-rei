@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  /* Earthy Browns */
+  --color-coffee-dark: #3E2723;
+  --color-coffee-medium: #5D4037;
+  --color-coffee-light: #8D6E63;
+  
+  /* Neutrals */
+  --color-cream: #FFF8E1;
+  --color-beige: #F5F5DC;
+  
+  /* Nature */
+  --color-green-soft: #A5D6A7;
+  --color-green-forest: #2E7D32;
+  
+  /* Accents */
+  --color-orange-burnt: #D84315;
+
+  --background: var(--color-cream);
+  --foreground: var(--color-coffee-dark);
+}
+
+@theme inline {
+  --color-coffee-dark: var(--color-coffee-dark);
+  --color-coffee-medium: var(--color-coffee-medium);
+  --color-coffee-light: var(--color-coffee-light);
+  --color-cream: var(--color-cream);
+  --color-beige: var(--color-beige);
+  --color-green-soft: var(--color-green-soft);
+  --color-green-forest: var(--color-green-forest);
+  --color-orange-burnt: var(--color-orange-burnt);
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-outfit);
+  
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
